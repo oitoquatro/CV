@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Curriculum</title>
+        <link rel="stylesheet" href="style.css"/>        
+    </head>
+    <body>
+        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHANnMrYZe7KA/profile-displayphoto-shrink_200_200/0/1648606264128?e=1668643200&v=beta&t=I24Dw2e0UmD5v7ypveoTHbWoUClA_5V9Zy0PxHlK0co" Width="100"/>
+        <h1 id="person-name" class="text">Seu Nome</h1>
+        <h2>Programador JavaScript</h2>
+        <p class="text">
+            Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.
+        </p>
+        <p>
+            Para mais detalhes, por favor, visite meu
+            <a href="https://github.com/oitoquatro">Github</a> ou
+            <a href="https://www.linkedin.com/in/paulo-j-p-junior-5a84b121a/">Linkedin</a>
+        </p>
+
+        <script>
+
+            const titleEl = document.querySelector("#person-name")
+            console.log("titleEl value:", titleEl.innerHTML)
+            titleEl.innerHTML = "Paulo JP Junior"
+            //titleEl.style.color = "red"
+
+            const subTitleEl = document.createElement("h2")
+            subTitleEl.innerHTML = "Projetos"
+
+            const pjListEl = document.createElement("ul")
+
+            const pjListItem1El = document.createElement("li")
+            pjListItem1El.innerHTML = "TODO MVC"
+
+            const pjListItem2El = document.createElement("li")
+            pjListItem2El.innerHTML = "Github API"
+
+            const pjListItem3El = document.createElement("li")
+            pjListItem3El.innerHTML = "eCommerce"
+
+            pjListEl.append(pjListItem1El)
+            pjListEl.append(pjListItem2El)
+            pjListEl.append(pjListItem3El)
+
+            document.body.append(subTitleEl)
+            document.body.append(pjListEl)
+
+            for(let i = 0; i < 10; i ++) {
+                pjListItem3El.innerHTML = `eCommerce ${i}`
+            }
+
+        </script>
